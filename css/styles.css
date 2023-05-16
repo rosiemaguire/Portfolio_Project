@@ -133,17 +133,18 @@ footer {
 
 header a {
   text-decoration: none;
-  color: var(--black);
+  color: var(--purple);
 }
 header .name-link {
   font-family: "Domine", serif;
   font-weight: 700;
   font-size: 1.75rem;
+  color: var(--purple);
 }
 
 header svg {
   height: 50px;
-  color: var(--black);
+  color: var(--purple);
 }
 header .hamburger-button,
 header .exit-button {
@@ -160,7 +161,7 @@ header .exit-button {
 
 .mobile-nav a {
   text-decoration: none;
-  color: var(--black);
+  color: var(--purple);
   display: block;
   padding: 4px 16px;
   text-align: right;
@@ -201,9 +202,13 @@ header .exit-button {
 #about, #about p,#about h1 {
   position: relative;
 }
-
+#about p {
+  /* font-weight: 00; */
+  font-size: 112%;
+}
 /* Projects */
 #projects {
+  padding-top: 16px;
   padding-bottom: 16px;
 }
 
@@ -231,12 +236,13 @@ header .exit-button {
 }
 
 #projects .evens {
-  background-color: var(--blue);
+  background-color: var(--purple);
 }
 #projects a {
   text-decoration: none;
   font-weight: 700;
   color: var(--black);
+  transition: all 0.3s ease;
 }
 
 #projects a:hover {
@@ -244,7 +250,8 @@ header .exit-button {
 }
 
 #background-video {
-  padding: 16px; 
+  padding: 16px;
+  max-width: 100%;
 }
 /* Contact Me */
 #contact {
