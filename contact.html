@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;500;700&family=Wix+Madefor+Display:wght@400;700&display=swap');
+    </style>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/9a1f871b50.js"
+      crossorigin="anonymous"></script>
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Contact Me</title>
+  </head>
+  <body>
+    <header>
+      <div class="mobile-header">
+        <a href="index.html" class="name-link">Rosie Maguire</a>
+        <button class="hamburger-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="hamburger-icon">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+        <button class="exit-button display-none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="exit-icon">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <nav class="desktop-nav">
+        <ul>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact Me</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="mobile-nav display-none">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="/index.html#about">About</a>
+          </li>
+          <li>
+            <a href="/index.html#projects">Projects</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="contact-section contact">
+        <article>
+          <h1>Get in touch</h1>
+          <p>You can find me on:</p>
+          <div id="icons">
+            <a
+            
+              href="https://au.linkedin.com/in/rosie-maguire-515777230"
+              ><img src="images/icons8-linkedin-48.png" alt="LinkedIn Icon" />
+              <a target="_blank" href="https://icons8.com/icon/13930/linkedin"
+                >LinkedIn</a
+              >
+              icon by <a target="_blank" href="https://icons8.com">Icons8</a></a
+            >
+
+            <a href="https://github.com/rosiemaguire">
+              <img src="images/icons8-github-64.png" alt="Github Logo" />
+              <a target="_blank" href="https://icons8.com/icon/52539/github"
+                >GitHub</a
+              >
+              icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+            </a>
+
+            <a href="https://www.instagram.com/rosie_maguire/?hl=en">
+              <img src="images/icons8-instagram-24.png" alt="Instagram Icon" />
+              <a
+                target="_blank"
+                href="https://icons8.com/icon/NdqqxfTuEK6C/instagram"
+                >Instagram</a
+              >
+              icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+            </a>
+
+            <a href="https://discordlookup.com/user/771540384186630194">
+              <img src="images/icons8-discord-48.png" alt="Discord Logo" /><a
+                target="_blank"
+                href="https://icons8.com/icon/30998/discord"
+                >Discord</a
+              >
+              icon by <a target="_blank" href="https://icons8.com">Icons8</a></a
+            >
+          </div>
+
+          <p>Alternatively, get in contact with me using the below form!</p>
+          <a href="#contact-form"
+            ><i class="fa-regular fa-envelope fa-2xl" style="color: #111111"></i
+          ></a>
+          <div class="bitmoji">
+          <img src="/images/File.png" alt="Bitmoji in letterbox">
+        </div>
+        </article>       
+      </section>
+      <section id="contact">
+        <form id="contact-form" action="https://formspree.io/f/xvonyvpq" method="post">
+          <label for="name">Name</label>
+          <input type="text" name="Name" id="name" />
+          <label for="email">Email</label>
+          <input type="text" name="Email" id="email" />
+          <label for="message">Message</label>
+          <textarea name="Message Text" id="message" rows="4"></textarea>
+          <input type="submit" value="Submit" class="btn-primary"/>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="socials">
+        <a class="footer-link" href="#contact-form"
+          ><i class="fa-solid fa-envelope fa-2xl"></i
+        ></a>
+        <a
+          class="footer-link"
+          href="https://au.linkedin.com/in/rosie-maguire-515777230"
+          ><i class="fa-brands fa-linkedin-in fa-2xl"></i>
+        </a>
+        <a
+          class="footer-link"
+          href="https://www.instagram.com/rosie_maguire/?hl=en">
+          <i class="fa-brands fa-instagram fa-2xl"></i
+        ></a>
+        <a class="footer-link" href="https://github.com/rosiemaguire">
+          <i class="fa-brands fa-github fa-2xl"></i>
+        </a>
+      </div>
+      <small class="copyright"> © 2023 Rosie Maguire. </small>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

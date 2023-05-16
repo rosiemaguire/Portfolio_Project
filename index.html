@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Domine:wght@400;500;700&family=Wix+Madefor+Display:wght@400;700&display=swap");
+    </style>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/9a1f871b50.js"
+      crossorigin="anonymous"></script>
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Portfolio Website</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="mobile-header">
+        <a href="index.html" class="name-link">Rosie Maguire</a>
+        <button class="hamburger-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="hamburger-icon">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+        <button class="exit-button display-none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="exit-icon">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <nav class="desktop-nav">
+        <ul>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact Me</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="mobile-nav display-none">
+        <ul>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact Me</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about" class="profile-pic">
+        <div class="my-info">
+          <h1>Hi, I'm Rosie!</h1>
+          <p>
+            Good morrow! I studied a Bachelor of Education (Primary) at QUT. I
+            began working casually in Child Care (OSHC) during the second half
+            of my degree and stayed in the field for eight years. In November
+            2020, I pivoted my career trajectory and began working with child
+            care software. Since working in the field of technology, I have
+            learned and used SQL (Particularly Microsoft SQL), engaged in a
+            Python Course via Udemy, began a Web Development course, also via
+            Udemy and I am currently lucky enough to be studying with She Codes
+            Australia in their 2023 Brisbane Plus cohort.
+          </p>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-wrapper">
+          <article class="project odds">
+            <h3>BlackJack game</h3>
+            <p>
+              Last year I completed a online Python course via Udemy. I worked
+              on various projects throughout this course, however my favourite
+              was the BlackJack Game I created. This project is run entirely
+              through the command line. As I was working on this project, my
+              friends helped test my debugging skills (such as when they found
+              that they could bet negative values)!
+              <br />
+              Feel free to give this one a go yourself and let me know if you
+              find any bugs or have any improvement suggestions!
+              <br />
+              You'll find the repo
+              <a href="https://github.com/rosiemaguire/blackjack">here</a>.
+            </p>
+          </article>
+
+          <article class="project evens spin">
+            <h3>My First HTML Website</h3>
+            <p>
+              As I commenced an online Web Development Course, the first task
+              was to create a HTML website. The initial product used tables, no
+              CSS and looked like something you would see on the web in the
+              1990s. I have since added a bit of CSS and JavaScript,
+              predominantly to make a fun spinning image in the hobbies page.
+            </p>
+            <video src="images/Video.mov" autoplay controls id="background-video"></video>
+          </article>
+
+          <article class="project odds">
+            <h3>Group Project: MarioKart Leaderboard</h3>
+            <p>
+              Two of my colleagues and friends and I are currently collaborating
+              and creating a digital leaderboard available to use for adding and
+              viewing Mario Kart maps race times. The project is currently using
+              HTML, CSS, HCL, Shell and JS.
+              <br />While this is still a work in progress, if you'd like to
+              follow along with this project, the repo is
+              <a href="https://github.com/w00kster/mariokart-leaderboard"
+                >here</a
+              >
+              and the live site is
+              <a href="https://w00kster.github.io/mariokart-leaderboard/"
+                >here</a
+              >.
+            </p>
+          </article>
+
+          <article class="project evens">
+            <h3>She Codes Portfolio Site</h3>
+            <p>
+              How could I talk about my projects without mentioning this one?
+              This website was my very first project with She Codes Australia.
+              It is my first time learning about and using semantic HTML,
+              setting CSS variables and much more. I hope to continue updating
+              this site over time as I learn new skills and look forward to
+              comparing the end product with my very first website to see how
+              far I have come and what I can achieve!
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact">
+        <hr />
+        <h4>
+          Click below if you'd like to say hello, learn more about me or talk
+          about collaborating!
+        </h4>
+        <a href="/contact.html" class="btn-primary">Get in touch</a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="socials">
+        <a class="footer-link" href="/contact.html#contact-form"
+          ><i class="fa-solid fa-envelope fa-2xl"></i
+        ></a>
+        <a
+          class="footer-link"
+          href="https://au.linkedin.com/in/rosie-maguire-515777230"
+          ><i class="fa-brands fa-linkedin-in fa-2xl"></i>
+        </a>
+        <a
+          class="footer-link"
+          href="https://www.instagram.com/rosie_maguire/?hl=en">
+          <i class="fa-brands fa-instagram fa-2xl"></i
+        ></a>
+        <a class="footer-link" href="https://github.com/rosiemaguire"
+          ><i class="fa-brands fa-github fa-2xl"></i
+        ></a>
+      </div>
+      <small class="copyright"> © 2023 Rosie Maguire. </small>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
