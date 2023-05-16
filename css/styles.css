@@ -201,15 +201,16 @@ header .exit-button {
 #projects {
   padding-bottom: 16px;
 }
-@media (min-width: 768px) {
+
+/* @media (min-width: 768px) {
   #projects .project-wrapper {
     display: flex;
   }
   #projects .project {
     flex: 1;
   }
+} */
 
-}
 #projects h2 {
   padding-left: 24px;
   padding-right: 24px;
