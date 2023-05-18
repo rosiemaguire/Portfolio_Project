@@ -135,6 +135,33 @@ footer {
   display: none;
 }
 
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: inline-block;
+  }
+
+  .desktop-nav ul {
+    display: flex;
+    gap: 24px;
+    margin-right: 16px;
+  }
+
+  .desktop-nav li {
+    border: var(--purple) 1px solid;
+    border-radius: 8px;
+    padding: auto;
+  }
+  .desktop-nav a {
+    padding: 12px 16px;
+}
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
 header a {
   text-decoration: none;
   color: var(--purple);
@@ -150,10 +177,17 @@ header svg {
   height: 50px;
   color: var(--purple);
 }
+
 header .hamburger-button,
 header .exit-button {
   background-color: unset;
   border: none;
+}
+@media (min-width: 768px) {
+  header .hamburger-button,
+  header .exit-button {
+    display: none;
+  }
 }
 
 .mobile-header {
@@ -173,6 +207,12 @@ header .exit-button {
 }
 .mobile-nav a:hover {
   font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
 }
 
 /* About Me */
@@ -210,9 +250,31 @@ header .exit-button {
 #about, #about p,#about h1 {
   position: relative;
 }
+
 #about p {
-  /* font-weight: 00; */
   font-size: 112%;
+}
+
+@media (min-width: 768px) {
+  
+  #about  {
+    background-image:url("../images/profile-img-3.png");
+    background-position-y: 50%;
+    background-position-x: 96%;
+    background-repeat: no-repeat;
+    background-size: 40% auto;
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+  #about::before {
+    display: none;
+  }
+
+  #about .my-info {
+    max-width: 50%;
+    
+  }
 }
 /* Projects */
 #projects {
