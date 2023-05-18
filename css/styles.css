@@ -395,6 +395,7 @@ footer small {
 .contact-section {
   text-align: center;
 }
+
 @media (min-width: 768px) {
   .contact-section {
     display: flex;
@@ -408,19 +409,31 @@ footer small {
     flex: 1;
   }
 }
+
 #icons img {
   height: 10vh;
   padding-top: 16px;
 }
+
 .contact-section p {
   font-size: 1.25rem;
   line-height: 1.5;
 }
+
 .contact-section,
 .contact-section .fa-envelope,
 .contact-section p {
-  padding: 32px 16px;
+  padding-bottom: 32px;
 }
+
+@media (min-width: 768px) {
+  .contact-section,
+  .contact-section .fa-envelope,
+  .contact-section p {
+    padding: 32px 16px;
+  }
+}
+
 .contact-section .fa-envelope {
   scale: 1.5;
   color: var(--black);
