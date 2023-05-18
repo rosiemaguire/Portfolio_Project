@@ -490,7 +490,7 @@ footer small {
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 90px;
   border: var(--purple) 2px solid;
   background-color: var(--tooltippurple);
   color: #fff;
@@ -508,7 +508,7 @@ footer small {
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
-  transform: translateY(115%) translateX(-70%);
+  transform: translateY(100%) translateX(-70%);
 }
 
 .tooltiptext a:hover {
