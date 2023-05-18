@@ -187,7 +187,11 @@ header .exit-button {
 
 #about::before {
   content: "";
-  background-image: url("../images/profile-img-3.png");
+  background-image: linear-gradient(
+      90deg,
+      rgba(235, 152, 78, 0.35),
+      rgba(230, 125, 34, 0.35)
+    ),url("../images/profile-img-3.png");
   position: absolute;
   background-position-x: center;
   background-size:cover;
