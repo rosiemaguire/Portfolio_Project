@@ -1,5 +1,5 @@
 /* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Domine:wght@400;500;700&family=Wix+Madefor+Display:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Domine:wght@400;500;700;900&family=Wix+Madefor+Display:wght@400;700&display=swap");
 
 /* Base HTML Styles */
 
@@ -68,10 +68,12 @@ h3,
 h4 {
   font-family: "Domine", serif;
 }
+
 h1 {
   font-weight: 700;
   font-size: 4rem;
 }
+
 body {
   font-family: "Wix Madefor Display", sans-serif;
   line-height: 1.5;
@@ -80,37 +82,26 @@ body {
 footer {
   background-color: var(--purple);
   text-align: center;
-  padding: 16px;
 }
 
 /* Components */
 .btn-primary {
   background: var(--lightpink);
-  background-image: -webkit-linear-gradient(
-    top,
-    var(--lightpink),
-    var(--lightpurple)
-  );
-  background-image: -moz-linear-gradient(
-    top,
-    var(--lightpink),
-    var(--lightpurple)
-  );
-  background-image: -ms-linear-gradient(
-    top,
-    var(--lightpink),
-    var(--lightpurple)
-  );
-  background-image: -o-linear-gradient(
-    top,
-    var(--lightpink),
-    var(--lightpurple)
-  );
-  background-image: linear-gradient(
-    to bottom,
-    var(--lightpink),
-    var(--lightpurple)
-  );
+  background-image: -webkit-linear-gradient(top,
+      var(--lightpink),
+      var(--lightpurple));
+  background-image: -moz-linear-gradient(top,
+      var(--lightpink),
+      var(--lightpurple));
+  background-image: -ms-linear-gradient(top,
+      var(--lightpink),
+      var(--lightpurple));
+  background-image: -o-linear-gradient(top,
+      var(--lightpink),
+      var(--lightpurple));
+  background-image: linear-gradient(to bottom,
+      var(--lightpink),
+      var(--lightpurple));
   -webkit-border-radius: 8;
   -moz-border-radius: 8;
   border-radius: 16px;
@@ -148,21 +139,23 @@ footer {
   }
 
   .desktop-nav li {
-    border: var(--purple) 1.5px solid;
+    border: var(--black) 2px solid;
     padding-left: 16px;
     padding-right: 16px;
     border-radius: 8px;
     transition: all 0.6s ease;
   }
+
   .desktop-nav li:hover {
     transform: scale(1.2);
-    box-shadow: 10px 5px 5px var(--lightpurple);
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 1);
   }
 
   header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: var(--purple);
   }
 }
 
@@ -170,12 +163,28 @@ header a {
   text-decoration: none;
   color: var(--purple);
 }
+
+@media (min-width: 768px) {
+  header a, .mobile-header .name-link {
+    color: var(--black);
+    text-shadow:1px 1px 1px rgba(0, 0, 0, 1);
+  }
+  header a {
+    font-size: 1.25rem;
+  }
+  .mobile-header .name-link {
+    font-weight: 900;
+    font-size: 2rem;
+  }
+}
+
 header .name-link {
   font-family: "Domine", serif;
   font-weight: 700;
   font-size: 1.75rem;
   color: var(--purple);
   transition: all 0.6s ease;
+  text-shadow:1px 1px 1px rgba(0, 0, 0, 1);
 }
 
 header .name-link:hover {
@@ -184,14 +193,15 @@ header .name-link:hover {
 
 header svg {
   height: 50px;
-  color: var(--purple);
+  color: var(--purple);  
 }
 
 header .hamburger-button,
 header .exit-button {
   background-color: unset;
-  border: none;
+  border: none; 
 }
+
 @media (min-width: 768px) {
   header .hamburger-button,
   header .exit-button {
@@ -200,20 +210,21 @@ header .exit-button {
 }
 
 .mobile-header {
-  padding: 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .mobile-nav a {
-  text-decoration: none;
+  text-decoration-line: none;
+  text-shadow:1px 1px 1px rgba(0, 0, 0, 1);
   color: var(--purple);
   display: block;
   padding: 4px 16px;
   text-align: right;
   transition: all 0.3s ease;
 }
+
 .mobile-nav a:hover {
   font-weight: 700;
 }
@@ -226,26 +237,17 @@ header .exit-button {
 
 /* About Me */
 #about {
-  padding: 56px 24px;
   display: flex;
-  height: auto;
   width: 100%;
   align-items: center;
   justify-content: center;
 }
-@media (min-width: 768px) {
-  #about {
-    gap: 5rem;
-  }
-}
 
 #about::before {
   content: "";
-  background-image: linear-gradient(
-      90deg,
+  background-image: linear-gradient(90deg,
       rgba(235, 152, 78, 0.35),
-      rgba(230, 125, 34, 0.35)
-    ),
+      rgba(230, 125, 34, 0.35)),
     url("../images/profile-img-3.png");
   position: absolute;
   background-position-x: center;
@@ -270,6 +272,7 @@ header .exit-button {
 
 #about p {
   font-size: 112%;
+  line-height: 1.5;
 }
 
 @media (min-width: 768px) {
@@ -277,31 +280,51 @@ header .exit-button {
     display: none;
   }
 
-  #about .my-info {
-    flex: 1;
+  #about p {
+    line-height: 2;
   }
 }
 
-#about .profile-pic {
+#about figure {
   display: none;
 }
 
 @media (min-width: 768px) {
-  #about .profile-pic:before {
+  #about figure {
     display: flex;
-    flex: 1;
+    justify-content: center;
+    margin: 0;
+    flex: 30%;
   }
-  
+
+  #about .my-info {
+    flex: 70%;
+  }
+
   #about .profile-pic {
-    display:unset; 
     border-radius: 24px;
   }
 }
 
 /* Projects */
-#projects {
-  padding: 16px;
+
+#projects hr {
+  display:none;
 }
+
+@media (min-width: 768px) {
+  #projects hr {
+    display: block;
+    border-top: 8px dotted;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    width: 10%;
+    color: var(--purple);
+    padding-bottom: 24px;
+  }
+}
+
 #projects .project-wrapper {
   display: flex;
   flex-direction: column;
@@ -315,11 +338,17 @@ header .exit-button {
 }
 
 #projects h2 {
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-size: 3rem;
 }
 
+@media (min-width: 768px) {
+  #projects h2 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+}
 #projects h3 {
   padding-bottom: 16px;
   font-size: 2rem;
@@ -330,15 +359,18 @@ header .exit-button {
   border: var(--pink) 4px solid;
   border-radius: 8px;
 }
+
 @media (min-width: 768px) {
   #projects .project {
     min-height: 40vh;
     flex: 1;
   }
 }
+
 #projects .evens {
   background-color: var(--purple);
 }
+
 #projects a {
   text-decoration: none;
   font-weight: 700;
@@ -351,7 +383,7 @@ header .exit-button {
 }
 
 #background-video {
-  padding: 16px;
+  padding-top: 16px;
   max-width: 100%;
 }
 
@@ -360,15 +392,18 @@ header .exit-button {
   padding: 32px 16px;
   text-align: center;
 }
+
 .contact a {
   margin: 16px;
 }
+
 .contact h3 {
   padding-left: 16px;
   padding-right: 16px;
   font-size: 2rem;
   margin-bottom: 32px;
 }
+
 .contact hr {
   display: block;
   border-top: 8px dotted;
@@ -385,16 +420,19 @@ header .exit-button {
 .footer-link .fa-solid {
   color: var(--black);
 }
+
 footer .socials {
   display: flex;
   gap: 24px;
   justify-content: center;
-  padding: 16px;
 }
-
+footer .socials a:hover {
+  transform: scale(1.2);
+}
 footer small {
   display: block;
 }
+
 /* Contact Page */
 /* Article */
 .contact-section {
@@ -405,19 +443,20 @@ footer small {
   .contact-section {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    gap: 24px;
-  }
-  .bitmoji,
-  .contact-section article {
     flex: 1;
   }
 }
 
 #icons img {
-  height: 10vh;
+  height: 9vh;
   padding-top: 16px;
+}
+@media (max-width:280px) {
+  #icons img {
+    height: 7vh;
+  }
 }
 
 .contact-section p {
@@ -432,6 +471,7 @@ footer small {
 }
 
 @media (min-width: 768px) {
+
   .contact-section,
   .contact-section .fa-envelope,
   .contact-section p {
@@ -452,7 +492,6 @@ footer small {
 
 #contact-form,
 #contact {
-  padding: 16px;
   margin-bottom: 8px;
 }
 
@@ -465,9 +504,11 @@ footer small {
   border: 0;
   margin-top: 16px;
 }
+
 #contact-form input {
   margin-bottom: 16px;
 }
+
 #contact-form input,
 #contact-form textarea {
   padding: 8px;
@@ -480,16 +521,29 @@ footer small {
   display: block;
   width: 100%;
 }
+
 /* Utilities */
 .display-none {
   display: none;
 }
 
+.space-util {
+  padding: 16px;
+}
+
+@media (min-width: 768px) {
+  .space-util {
+    padding: 32px;
+  }
+}
+
+.font-outline {
+  text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+}
 /* Tooltip container */
 .tooltip {
   position: relative;
   display: inline-block;
-  padding: 16px;
 }
 
 /* Tooltip text */
@@ -506,11 +560,13 @@ footer small {
   z-index: 1;
   transform: translateY(100%) translateX(-70%);
 }
+
 .tooltiptext a {
   color: white;
   text-decoration: none;
   font-weight: 700;
 }
+
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
