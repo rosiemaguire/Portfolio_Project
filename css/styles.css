@@ -235,7 +235,7 @@ header .exit-button {
 }
 @media (min-width: 768px) {
   #about {
-    gap: 24px;
+    gap: 5rem;
   }
 }
 
@@ -287,12 +287,17 @@ header .exit-button {
 }
 
 @media (min-width: 768px) {
-  #about .profile-pic {
+  #about .profile-pic:before {
     display: flex;
     flex: 1;
+  }
+  
+  #about .profile-pic {
+    display:unset; 
     border-radius: 24px;
   }
 }
+
 /* Projects */
 #projects {
   padding: 16px;
