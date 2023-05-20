@@ -426,6 +426,9 @@ footer .socials {
   gap: 24px;
   justify-content: center;
 }
+footer .socials a {
+  transition: all 0.3s ease;
+}
 footer .socials a:hover {
   transform: scale(1.2);
 }
@@ -558,7 +561,12 @@ footer small {
   border-radius: 6px;
   position: absolute;
   z-index: 1;
-  transform: translateY(100%) translateX(-70%);
+  transform: translateY(100%) translateX(-90%);
+}
+@media (min-width:768px) {
+  .tooltip .tooltiptext {
+    transform: translateY(100%) translateX(-80%);
+  }
 }
 
 .tooltiptext a {
