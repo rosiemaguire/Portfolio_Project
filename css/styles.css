@@ -405,6 +405,11 @@ footer small {
 #icons img {
   height: 9vh;
   padding-top: 16px;
+  flex: 1;
+}
+
+#icons {
+  justify-content: space-between;
 }
 
 @media (max-width: 280px) {
@@ -511,6 +516,7 @@ footer small {
 .tooltip {
   position: relative;
   display: inline-block;
+  padding: 16px;
 }
 
 .tooltip .tooltiptext {
