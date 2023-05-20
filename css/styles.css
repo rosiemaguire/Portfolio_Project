@@ -362,12 +362,9 @@ header .hamburger-button, header .exit-button {
 
 .contact hr {
   display: block;
-  border-top: 8px dotted;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
+  border-top: var(--purple) 8px;
+  border-style: dotted none none;
   width: 10%;
-  color: var(--purple);
   padding-bottom: 24px;
 }
 
@@ -450,11 +447,6 @@ footer small {
   border-radius: 8px;
 }
 
-#contact-form input[type="submit"] {
-  border: 0;
-  margin-top: 16px;
-}
-
 #contact-form input {
   margin-bottom: 16px;
 }
@@ -466,6 +458,24 @@ footer small {
 #contact-form, #contact-form label, #contact-form input, #contact-form textarea {
   display: block;
   width: 100%;
+}
+@media (min-width: 768px) {
+  #contact-form {
+    display:grid;
+    grid-template-columns: max-content auto;
+    grid-gap:16px;
+  }
+  #contact-form label {
+    text-align: right;
+  }​
+  #contact-form label{
+    content: ":";
+  }
+
+  #contact-form input[type="submit"] {
+    grid-column-end: span 2;
+    border: none;
+  }
 }
 
 /* Utilities */
