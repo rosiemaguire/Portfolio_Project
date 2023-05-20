@@ -24,28 +24,16 @@ html {
   scroll-behavior: smooth;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: inherit;
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ol,
-ul {
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   margin: 0;
   padding: 0;
 }
 
-ol,
-ul {
+ol, ul {
   list-style: none;
 }
 
@@ -54,18 +42,16 @@ img {
   height: auto;
 }
 
-input,
-button,
-textarea,
-select {
+input, button, textarea, select {
   font: inherit;
 }
 
 /* Global styles */
-h1,
-h2,
-h3,
-h4 {
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4 {
   font-family: "Domine", serif;
 }
 
@@ -87,29 +73,17 @@ footer {
 /* Components */
 .btn-primary {
   background: var(--lightpink);
-  background-image: -webkit-linear-gradient(top,
-      var(--lightpink),
-      var(--lightpurple));
-  background-image: -moz-linear-gradient(top,
-      var(--lightpink),
-      var(--lightpurple));
-  background-image: -ms-linear-gradient(top,
-      var(--lightpink),
-      var(--lightpurple));
-  background-image: -o-linear-gradient(top,
-      var(--lightpink),
-      var(--lightpurple));
-  background-image: linear-gradient(to bottom,
-      var(--lightpink),
-      var(--lightpurple));
+  background-image: -webkit-linear-gradient(top, var(--lightpink), var(--lightpurple));
+  background-image: -moz-linear-gradient(top, var(--lightpink), var(--lightpurple));
+  background-image: -ms-linear-gradient(top, var(--lightpink), var(--lightpurple));
+  background-image: -o-linear-gradient(top, var(--lightpink), var(--lightpurple));
+  background-image: linear-gradient(to bottom, var(--lightpink), var(--lightpurple));
   -webkit-border-radius: 8;
   -moz-border-radius: 8;
   border-radius: 16px;
   color: #ffffff;
   font-size: 1.5rem;
   padding: 10px 20px 10px 20px;
-  text-decoration: none;
-  transition: all 0.2s ease;
 }
 
 .btn-primary:hover {
@@ -133,7 +107,6 @@ footer {
   }
 
   .desktop-nav ul {
-    display: flex;
     gap: 24px;
     margin-right: 16px;
   }
@@ -152,7 +125,6 @@ footer {
   }
 
   header {
-    display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--purple);
@@ -160,14 +132,13 @@ footer {
 }
 
 header a {
-  text-decoration: none;
   color: var(--purple);
 }
 
 @media (min-width: 768px) {
   header a, .mobile-header .name-link {
     color: var(--black);
-    text-shadow:1px 1px 1px rgba(0, 0, 0, 1);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
   }
   header a {
     font-size: 1.25rem;
@@ -184,7 +155,7 @@ header .name-link {
   font-size: 1.75rem;
   color: var(--purple);
   transition: all 0.6s ease;
-  text-shadow:1px 1px 1px rgba(0, 0, 0, 1);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
 }
 
 header .name-link:hover {
@@ -193,31 +164,27 @@ header .name-link:hover {
 
 header svg {
   height: 50px;
-  color: var(--purple);  
+  color: var(--purple);
 }
 
-header .hamburger-button,
-header .exit-button {
+header .hamburger-button, header .exit-button {
   background-color: unset;
-  border: none; 
+  border: none;
 }
 
 @media (min-width: 768px) {
-  header .hamburger-button,
-  header .exit-button {
+  header .hamburger-button, header .exit-button {
     display: none;
   }
 }
 
 .mobile-header {
-  display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .mobile-nav a {
-  text-decoration-line: none;
-  text-shadow:1px 1px 1px rgba(0, 0, 0, 1);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
   color: var(--purple);
   display: block;
   padding: 4px 16px;
@@ -237,7 +204,6 @@ header .exit-button {
 
 /* About Me */
 #about {
-  display: flex;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -245,10 +211,7 @@ header .exit-button {
 
 #about::before {
   content: "";
-  background-image: linear-gradient(90deg,
-      rgba(235, 152, 78, 0.35),
-      rgba(230, 125, 34, 0.35)),
-    url("../images/profile-img-3.png");
+  background-image: linear-gradient(90deg, rgba(235, 152, 78, 0.35), rgba(230, 125, 34, 0.35)),url("../images/profile-img-3.png");
   position: absolute;
   background-position-x: center;
   background-size: cover;
@@ -264,9 +227,7 @@ header .exit-button {
   margin-bottom: 16px;
 }
 
-#about,
-#about p,
-#about h1 {
+#about, #about p, #about h1 {
   position: relative;
 }
 
@@ -309,24 +270,20 @@ header .exit-button {
 /* Projects */
 
 #projects hr {
-  display:none;
+  display: none;
 }
 
 @media (min-width: 768px) {
   #projects hr {
     display: block;
-    border-top: 8px dotted;
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
+    border-top: var(--purple) 8px;
+    border-style: dotted none none;
     width: 10%;
-    color: var(--purple);
     padding-bottom: 24px;
   }
 }
 
 #projects .project-wrapper {
-  display: flex;
   flex-direction: column;
   gap: 8px;
 }
@@ -347,7 +304,7 @@ header .exit-button {
   #projects h2 {
     padding-top: 16px;
     padding-bottom: 16px;
-}
+  }
 }
 #projects h3 {
   padding-bottom: 16px;
@@ -372,7 +329,6 @@ header .exit-button {
 }
 
 #projects a {
-  text-decoration: none;
   font-weight: 700;
   color: var(--black);
   transition: all 0.3s ease;
@@ -406,23 +362,18 @@ header .exit-button {
 
 .contact hr {
   display: block;
-  border-top: 8px dotted;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
+  border-top: var(--purple) 8px;
+  border-style: dotted none none;
   width: 10%;
-  color: var(--purple);
   padding-bottom: 24px;
 }
 
 /* Footer  */
-.footer-link .fa-brands,
-.footer-link .fa-solid {
+.footer-link .fa-brands, .footer-link .fa-solid {
   color: var(--black);
 }
 
 footer .socials {
-  display: flex;
   gap: 24px;
   justify-content: center;
 }
@@ -444,7 +395,6 @@ footer small {
 
 @media (min-width: 768px) {
   .contact-section {
-    display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
@@ -456,7 +406,12 @@ footer small {
   height: 9vh;
   padding-top: 16px;
 }
-@media (max-width:280px) {
+
+#icons {
+  justify-content: space-between;
+}
+
+@media (max-width: 280px) {
   #icons img {
     height: 7vh;
   }
@@ -467,17 +422,12 @@ footer small {
   line-height: 1.5;
 }
 
-.contact-section,
-.contact-section .fa-envelope,
-.contact-section p {
+.contact-section, .contact-section .fa-envelope, .contact-section p {
   padding-bottom: 32px;
 }
 
 @media (min-width: 768px) {
-
-  .contact-section,
-  .contact-section .fa-envelope,
-  .contact-section p {
+  .contact-section, .contact-section .fa-envelope, .contact-section p {
     padding: 32px 16px;
   }
 }
@@ -489,12 +439,10 @@ footer small {
 
 /* Contact Form */
 #contact {
-  display: flex;
   justify-content: space-around;
 }
 
-#contact-form,
-#contact {
+#contact-form, #contact {
   margin-bottom: 8px;
 }
 
@@ -503,26 +451,35 @@ footer small {
   border-radius: 8px;
 }
 
-#contact-form input[type="submit"] {
-  border: 0;
-  margin-top: 16px;
-}
-
 #contact-form input {
   margin-bottom: 16px;
 }
 
-#contact-form input,
-#contact-form textarea {
+#contact-form input, #contact-form textarea {
   padding: 8px;
 }
 
-#contact-form,
-#contact-form label,
-#contact-form input,
-#contact-form textarea {
+#contact-form, #contact-form label, #contact-form input, #contact-form textarea {
   display: block;
   width: 100%;
+}
+@media (min-width: 768px) {
+  #contact-form {
+    display:grid;
+    grid-template-columns: max-content auto;
+    grid-gap:16px;
+  }
+  #contact-form label {
+    text-align: right;
+  }​
+  #contact-form label{
+    content: ":";
+  }
+
+  #contact-form input[type="submit"] {
+    grid-column-end: span 2;
+    border: none;
+  }
 }
 
 /* Utilities */
@@ -541,15 +498,26 @@ footer small {
 }
 
 .font-outline {
-  text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+  text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black),
+    -1px 1px 0 var(--black), 1px 1px 0 var(--black);
 }
-/* Tooltip container */
+
+.flex {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .desktop-flex {
+    display: flex;
+  }
+}
+
 .tooltip {
   position: relative;
   display: inline-block;
+  padding: 16px;
 }
 
-/* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 90px;
@@ -563,7 +531,7 @@ footer small {
   z-index: 1;
   transform: translateY(100%) translateX(-90%);
 }
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .tooltip .tooltiptext {
     transform: translateY(100%) translateX(-80%);
   }
@@ -571,11 +539,9 @@ footer small {
 
 .tooltiptext a {
   color: white;
-  text-decoration: none;
   font-weight: 700;
 }
 
-/* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
