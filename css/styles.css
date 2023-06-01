@@ -203,15 +203,25 @@ header .hamburger-button, header .exit-button {
 }
 
 /* About Me */
-#about {
+.mob-view {
   width: 100%;
   align-items: center;
   justify-content: center;
 }
 
-#about::before {
+@media (min-width: 768px) {
+  .mob-view {
+  gap: 40px;
+
+  }
+}
+
+.mob-view, .mob-view h1, .mob-view p {
+  position: relative
+}
+
+.mob-view::before {
   content: "";
-  background-image: linear-gradient(90deg, rgba(235, 152, 78, 0.35), rgba(230, 125, 34, 0.35)),url("../images/profile-img-3.png");
   position: absolute;
   background-position-x: center;
   background-size: cover;
@@ -221,6 +231,20 @@ header .hamburger-button, header .exit-button {
   bottom: 0px;
   left: 0px;
   opacity: 0.6;
+}
+
+.mob-view figure {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mob-view::before {
+    display: none;
+  }
+}
+
+#about::before {
+  background-image: linear-gradient(90deg, rgba(235, 152, 78, 0.35), rgba(230, 125, 34, 0.35)),url("../images/SheCodes\ HD\ May\ 2023-40.jpg");
 }
 
 #about h1 {
@@ -237,32 +261,29 @@ header .hamburger-button, header .exit-button {
 }
 
 @media (min-width: 768px) {
-  #about::before {
-    display: none;
-  }
-
   #about p {
     line-height: 2;
   }
 }
 
-#about figure {
-  display: none;
-}
-
 @media (min-width: 768px) {
-  #about figure {
+  .mob-view figure {
     display: flex;
     justify-content: center;
     margin: 0;
+  }
+  #about figure {
     flex: 30%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
   }
 
   #about .my-info {
     flex: 70%;
   }
 
-  #about .profile-pic {
+  .profile-pic {
     border-radius: 24px;
   }
 }
@@ -392,13 +413,19 @@ footer small {
 .contact-section {
   text-align: center;
 }
+.contact-section::before {
+  background-image: linear-gradient(90deg, rgba(235, 152, 78, 0.35), rgba(230, 125, 34, 0.35)),url("../images/SheCodes\ HD\ May\ 2023-43.jpg");
+}
 
 @media (min-width: 768px) {
   .contact-section {
     flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
-    flex: 1;
+    padding: 32px;
+  }
+  .contact-section figure, .contact-section article {
+    flex:1;
   }
 }
 
@@ -427,7 +454,7 @@ footer small {
 }
 
 @media (min-width: 768px) {
-  .contact-section, .contact-section .fa-envelope, .contact-section p {
+  .contact-section .fa-envelope, .contact-section p {
     padding: 32px 16px;
   }
 }
@@ -482,6 +509,7 @@ footer small {
 }
 #contact-form input[type="submit"] {
   border: none;
+  margin-top: 16px;
 }
 
 /* Utilities */
