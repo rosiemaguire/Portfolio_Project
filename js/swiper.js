@@ -1,32 +1,29 @@
 // init Swiper:
 const swiper = new Swiper(".swiper", {
-	// Optional parameters
-	// direction: 'horizontal',
-	slidesPerView: 3,
+	slidesPerView: "auto",
 	loop: true,
-
-	breakpoints: {
-		// when window width is >= 320px
-		320: {
-			slidesPerView: 2,
-			spaceBetween: 5,
-			centeredSlides: true,
-		},
-		// when window width is >= 640px
-		640: {
-			slidesPerView: 3,
-			spaceBetween: 5,
-		},
-		// when window width is >= 640px
-		1607: {
-			slidesPerView: 4,
-			spaceBetween: 5,
-		},
+	grabcursor: true,
+	centeredSlides: true,
+	effect: "coverflow",
+	coverflow: {
+		rotate: 0,
+		stretch: 0,
+		depth: 100,
+		modifier: 2.5,
+		slideShadows: true,
 	},
 	// If we need pagination
 	pagination: {
 		el: ".swiper-pagination",
+		clickable: true,
+		dynamicBullets: true,
+		clickable: true,
 	},
+	autoplay: {
+		delay: 20000,
+		disableOnInteraction: false,
+		reverseDirection: false,
+},
 
 	// Navigation arrows
 	navigation: {
