@@ -1,5 +1,4 @@
 .swiper-wrapper {
-  /* margin: 10px 0px; */
   display: flex;
 }
 
@@ -13,10 +12,8 @@
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  /* height: 300px; */
   text-align: center;
   background: #fff;
-  /* width: 70px; */
 
   /* Center slide text vertically */
   display: flex;

@@ -315,7 +315,7 @@ header .hamburger-button, header .exit-button {
   #projects .project-wrapper {
     flex-direction: row;
     position: relative;
-    height: 600px;
+    height: 550px;
   }
 }
 
@@ -346,13 +346,14 @@ header .hamburger-button, header .exit-button {
 
 @media (min-width: 768px) {
   #projects .project {
-    min-height: 40vh;
+    /* min-height: 40vh; */
     /* margin-bottom: 10px; */
     /* max-width: 94%; */
     /* flex: 1; */
     /* position: absolute;
     top: 0; */
-   
+    max-height: 86%;
+    width: 450px !important;
   } 
 }
 
