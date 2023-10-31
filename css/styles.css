@@ -311,7 +311,6 @@ header .hamburger-button, header .exit-button {
 
 @media (min-width: 768px) {
   #projects .project-wrapper {
-    /* flex-direction: row; */
     position: relative;
     height: 550px;
   }
@@ -342,11 +341,19 @@ header .hamburger-button, header .exit-button {
   width: 250px !important;
 }
 
+#projects p {
+  font-size: 0.9rem;
+}
+
 @media (min-width: 768px) {
   #projects .project {
     max-height: 86%;
     width: 450px !important;
   } 
+
+  #projects p {
+    font-size: 1rem;
+  }
 }
 
 #projects .evens {
@@ -362,14 +369,22 @@ header .hamburger-button, header .exit-button {
 #projects a:hover {
   text-shadow: 0.7px 0.7px 0.7px rgba(0, 0, 0, 1);
 }
-
 #background-video {
-  padding-top: 16px;
   max-width: 80%;
+}
+
+#background-video, .mentorship-logo, .advocat-logo {
   display: block;
   margin: 0 auto;
 }
 
+.advocat-logo {
+  max-width: 70%;
+}
+
+.mentorship-logo {
+  max-width: 50%;
+}
 /* Contact Me */
 .contact {
   padding: 32px 16px;
